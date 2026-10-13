@@ -1,0 +1,113 @@
+.resume {
+  padding: 90px 8%;
+  background: radial-gradient(
+    circle at center,
+    #312e81 0%,
+    #1e293b 45%,
+    #020617 100%
+  );
+}
+
+.resume-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  text-align: center;
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 24px;
+  background: rgba(8, 15, 35, 0.65);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.resume-container h2 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 38px;
+}
+
+.resume-description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 165px;
+  padding: 13px 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.resume-view-button {
+  border-color: rgba(165, 180, 252, 0.4);
+  background: rgba(99, 102, 241, 0.12);
+  color: #c7d2fe;
+}
+
+.resume-download-button {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.2);
+}
+
+.resume-button:hover {
+  transform: translateY(-3px);
+}
+
+.resume-view-button:hover {
+  background: rgba(99, 102, 241, 0.25);
+}
+
+.resume-download-button:hover {
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+@media (max-width: 600px) {
+  .resume {
+    padding: 65px 5%;
+  }
+
+  .resume-container {
+    padding: 35px 20px;
+  }
+
+  .resume-container h2 {
+    font-size: 29px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-button {
+    transition: none;
+  }
+
+  .resume-button:hover {
+    transform: none;
+  }
+}

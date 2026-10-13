@@ -1,0 +1,232 @@
+.experience {
+  padding: 100px 8%;
+  background: radial-gradient(
+    circle at center,
+    #312e81 0%,
+    #1e293b 45%,
+    #020617 100%
+  );
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.experience-container h2 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 42px;
+}
+
+.experience-intro {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 55px auto 0;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.experience-timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #818cf8,
+    rgba(129, 140, 248, 0.15)
+  );
+  content: "";
+}
+
+.experience-marker {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a5b4fc;
+  border-radius: 50%;
+  background: #0b1120;
+}
+
+.experience-marker span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a5b4fc;
+}
+
+.experience-card {
+  padding: 32px;
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 22px;
+  background: radial-gradient(
+    circle at top right,
+    #25245c,
+    #080f23 70%
+  );
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(129, 140, 248, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.experience-header h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.experience-company {
+  margin: 0;
+  color: #a5b4fc;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-period {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(165, 180, 252, 0.2);
+  border-radius: 20px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #c7d2fe;
+  font-size: 13px;
+}
+
+.experience-project {
+  margin: 25px 0 18px;
+  color: #67e8f9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.experience-responsibilities {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 20px;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.experience-responsibilities li::marker {
+  color: #818cf8;
+}
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 26px;
+}
+
+.experience-technologies span {
+  padding: 7px 12px;
+  border: 1px solid rgba(165, 180, 252, 0.15);
+  border-radius: 18px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #c7d2fe;
+  font-size: 12px;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.experience-technologies span:hover {
+  transform: translateY(-2px);
+  background: rgba(99, 102, 241, 0.25);
+}
+
+.experience.is-visible .experience-card {
+  animation: experienceFadeUp 0.7s ease-out both;
+}
+
+@keyframes experienceFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .experience {
+    padding: 75px 5%;
+  }
+
+  .experience-container h2 {
+    font-size: 32px;
+  }
+
+  .experience-timeline {
+    margin-top: 40px;
+    padding-left: 24px;
+  }
+
+  .experience-card {
+    padding: 23px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .experience-header h3 {
+    font-size: 23px;
+  }
+
+  .experience-responsibilities {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-technologies span {
+    animation: none !important;
+    transition: none;
+  }
+
+  .experience-card:hover,
+  .experience-technologies span:hover {
+    transform: none;
+  }
+}
